@@ -100,14 +100,15 @@ cohort.addEventListener('change', () => {
                         }
                       }
 
-                      if(part.hasOwnProperty('quiz'))
-                      for (let quiz of Object.values(part.quiz)){
-                        if (quiz.type === 'quiz') { 
-                          totalQuiz++;
-                          quizCompleted= quizCompleted + quiz.completed
-                      }
-
-                    }
+                      if(part.hasOwnProperty('quiz')){
+                        for (let quiz of Object.values(part.quiz)){
+                          if (quiz.type === 'quiz') { 
+                            quizCompleted= quizCompleted + quiz.completed;
+                            totalQuiz++;
+                            }
+                          }
+                        }
+                      
                   
                   }
                   })
